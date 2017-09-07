@@ -1,0 +1,41 @@
+;Data reading about the National Revenue Agency
+Non-fiscal receipt opening
+Non-fiscal receipt closing
+;Fiscal free text printing
+Printing free text in non-fiscal receipt
+;Paper advancement
+Date and time
+;Date and time Reading
+;Date and time Showing
+SET HEADER and FOOTER Message
+setting clerk password
+setting clerk
+;The number of free fields in the fiscal memory
+Office cash-in and cash-out
+Diagnostic information print-out
+X Daily Report
+Z Daily Report
+Print Z daily report and PLU report
+;Fiscalization
+;Fiscal memory print-out according to the block number
+;Statuses receiving
+;Accrued sums in the fiscal memory for particular period of time
+Clerk Sale Report
+Detailed daily financial report
+Detailed report of the fiscal memory (by number)
+Print fiscal memory report (by date)
+Short report of the fiscal memory (by number)
+Short report of the fiscal memory (by date)
+Information on daily totals
+Information about the current receipt
+Information about the last fiscal entry
+;Information about the sums in terms of tax groups for the day
+;Information about operator
+Information about the sums accrued in the department
+Advance paper
+Cut off
+Set Tax ID
+Set Fiscal Number
+Fiscalization
+Cash Copy
+Download logo

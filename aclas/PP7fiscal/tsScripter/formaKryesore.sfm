@@ -1,0 +1,363 @@
+object PrintimiFrm: TScriptForm
+  Left = 5
+  Top = 5
+  Caption = 'PrintimiFrm'
+  ClientHeight = 555
+  ClientWidth = 766
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesigned
+  SaveProps.Strings = (
+    'Visible=False'
+    'Position=poScreenCenter'
+    'BorderStyle=bsSizeable'
+    'Align=alClient')
+  SaveEvents.Strings = (
+    'Self.OnCreate=frmPrintimiCreate'
+    'Timer1.OnTimer=Timer1Timer'
+    'Self.OnClose=PrintimiFrmClose'
+    'btTestoLidhjen_.OnClick=TestoLidhjen'
+    'btPerpunoTekstin.OnClick=PerpunoTekstin'
+    'btPrinto.OnClick=btPrintoClick'
+    'listKodi.OnDblClick=listKodiDblClick'
+    'listKodi.OnClick=listKodiClick'
+    'listKomanda.OnClick=listKodiClick'
+    'listKomanda.OnDblClick=listKodiDblClick')
+  PixelsPerInch = 96
+  TextHeight = 13
+  object PageControl1: TPageControl
+    Left = 0
+    Top = 0
+    Width = 766
+    Height = 555
+    ActivePage = tabTestPrintim
+    Align = alClient
+    TabOrder = 0
+    object tabTestPrintim: TTabSheet
+      Caption = 'TestPrintim'
+      object scrollBoxTestPrintim: TScrollBox
+        Left = 64
+        Top = 32
+        Width = 185
+        Height = 41
+        BorderStyle = bsNone
+        TabOrder = 0
+      end
+      object ScrollBox1: TScrollBox
+        Left = 0
+        Top = 0
+        Width = 758
+        Height = 527
+        Align = alClient
+        BevelInner = bvNone
+        BevelOuter = bvNone
+        TabOrder = 1
+        DesignSize = (
+          754
+          523)
+        object btPerpunoTekstin: TRzToolButton
+          Left = 259
+          Top = 58
+          Width = 45
+          Height = 31
+          GradientColorStyle = gcsMSOffice
+          Images = FrmMain.cxSmallImages
+          ShowCaption = True
+          UseToolbarButtonSize = False
+          UseToolbarShowCaption = False
+          UseToolbarVisualStyle = False
+          VisualStyle = vsWinXP
+          Caption = '>>'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -13
+          Font.Name = 'Tahoma'
+          Font.Style = []
+          ParentFont = False
+        end
+        object RzSeparator1: TRzSeparator
+          Left = 8
+          Top = 48
+          Width = 743
+          Height = 1
+          ShowGradient = True
+          Anchors = [akLeft, akTop, akRight]
+          Color = clHighlight
+          ParentColor = False
+          ExplicitWidth = 665
+        end
+        object RzSeparator2: TRzSeparator
+          Left = 8
+          Top = 9
+          Width = 743
+          Height = 1
+          ShowGradient = True
+          Anchors = [akLeft, akTop, akRight]
+          Color = clHighlight
+          ParentColor = False
+          ExplicitWidth = 665
+        end
+        object infoLidhurShape: TShape
+          Left = 107
+          Top = 14
+          Width = 21
+          Height = 31
+          Shape = stCircle
+        end
+        object Bevel1: TBevel
+          Left = 133
+          Top = 11
+          Width = 2
+          Height = 36
+        end
+        object btTestoLidhjen_: TRzBitBtn
+          Left = 8
+          Top = 10
+          Width = 97
+          Height = 38
+          Caption = 'Testo Lidhjen'
+          TabOrder = 0
+          ImageIndex = 37
+          Images = FrmMain.cxSmallImages
+        end
+        object mOutput: TMemo
+          Left = 312
+          Top = 56
+          Width = 198
+          Height = 246
+          Lines.Strings = (
+            'Memo1')
+          ScrollBars = ssBoth
+          TabOrder = 1
+        end
+        object mInput: TMemo
+          Left = 8
+          Top = 56
+          Width = 240
+          Height = 246
+          Lines.Strings = (
+            'H,1,______,_,__;'
+            'S,1,______,_,__;brief praline;2400.00;1.00;1;1;1;0;0;'
+            'T,1,______,_,__;0;2400;;;'
+            'T,1,______,_,__;'
+            'F,1,______,_,__;')
+          ScrollBars = ssBoth
+          TabOrder = 2
+        end
+        object listKomanda: TListBox
+          Left = 512
+          Top = 56
+          Width = 177
+          Height = 246
+          ItemHeight = 13
+          TabOrder = 3
+        end
+        object listKodi: TListBox
+          Left = 692
+          Top = 56
+          Width = 45
+          Height = 246
+          ItemHeight = 13
+          TabOrder = 4
+        end
+        object btPrinto: TButton
+          Left = 664
+          Top = 320
+          Width = 75
+          Height = 25
+          Caption = 'Printo'
+          TabOrder = 5
+        end
+      end
+    end
+    object tabKonfigurime: TTabSheet
+      Caption = 'Konfigurime'
+      object ScrollBoxKonfigurime: TScrollBox
+        Left = 0
+        Top = 0
+        Width = 758
+        Height = 527
+        Align = alClient
+        BorderStyle = bsNone
+        TabOrder = 0
+        DesignSize = (
+          758
+          527)
+        object dbgrd1: TDBGrid
+          Left = 8
+          Top = 8
+          Width = 740
+          Height = 509
+          Anchors = [akLeft, akTop, akRight, akBottom]
+          DataSource = dtConfig_1
+          TabOrder = 0
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'Tahoma'
+          TitleFont.Style = []
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'GRUPI'
+              Title.Caption = 'Grupi'
+              Width = 60
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'KODI'
+              ReadOnly = True
+              Title.Caption = 'Kodi'
+              Width = 35
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'SIMBOLI'
+              Title.Caption = 'Simboli'
+              Width = 37
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'PERSHKRIM'
+              Title.Caption = 'Pershkrim'
+              Width = 206
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'SHEMBULL'
+              Title.Caption = 'Shembull'
+              Width = 228
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'AKTIV'
+              Title.Caption = 'Aktiv'
+              Visible = False
+            end>
+        end
+      end
+    end
+    object tabShembuj: TTabSheet
+      Caption = 'Shembuj'
+      TabVisible = False
+      object pcShembuj: TPageControl
+        Left = 8
+        Top = 16
+        Width = 633
+        Height = 401
+        ActivePage = tabShembull1
+        TabOrder = 0
+        object tabShembull1: TTabSheet
+          Caption = 'Printim jo fiskal'
+          object mhembulljoFiskal: TMemo
+            Left = 0
+            Top = 0
+            Width = 625
+            Height = 373
+            Align = alClient
+            Lines.Strings = (
+              '38,1,_____,_,__;'
+              '42,1,_____,_,__;Adem Ademi'
+              '39,1,_____,_,__;')
+            ScrollBars = ssBoth
+            TabOrder = 0
+          end
+        end
+        object TabSheet3: TTabSheet
+          Caption = 'Printim fiskal'
+          object mShembullFiskal: TMemo
+            Left = 0
+            Top = 0
+            Width = 625
+            Height = 373
+            Align = alClient
+            Lines.Strings = (
+              '38,1,_____,_,__;'
+              '42,1,_____,_,__;Adem Ademi'
+              '39,1,_____,_,__;')
+            ScrollBars = ssBoth
+            TabOrder = 0
+          end
+        end
+        object TabSheet4: TTabSheet
+          Caption = 'Printim fiskal me skonto'
+          object mShembullFiskalMeSkonto: TMemo
+            Left = 0
+            Top = 0
+            Width = 625
+            Height = 373
+            Align = alClient
+            Lines.Strings = (
+              '38,1,_____,_,__;'
+              '42,1,_____,_,__;Adem Ademi'
+              '39,1,_____,_,__;')
+            ScrollBars = ssBoth
+            TabOrder = 0
+          end
+        end
+      end
+    end
+  end
+  object Timer1: TTimer
+    Left = 248
+    Top = 184
+  end
+  object dtConfig_1: TDataSource
+    DataSet = dtConfig
+    Left = 304
+    Top = 208
+  end
+  object dtConfig: TJvCsvDataSet
+    FieldDefs = <
+      item
+        Name = 'GRUPI'
+        DataType = ftString
+        Size = 50
+      end
+      item
+        Name = 'KODI'
+        DataType = ftInteger
+      end
+      item
+        Name = 'SIMBOLI'
+        DataType = ftString
+        Size = 20
+      end
+      item
+        Name = 'PERSHKRIM'
+        DataType = ftString
+        Size = 300
+      end
+      item
+        Name = 'SHEMBULL'
+        DataType = ftString
+        Size = 300
+      end
+      item
+        Name = 'AKTIV'
+        DataType = ftBoolean
+      end>
+    Active = True
+    FileName = 'E:\Aclas\Demo\Protokoll.cfg'
+    CsvFieldDef = 
+      'GRUPI:$50|KODI:%|SIMBOLI:$20|PERSHKRIM:$300|SHEMBULL:$300|AKTIV:' +
+      '!'
+    Separator = '|'
+    AutoBackupCount = 0
+    StoreDefs = True
+    AlwaysEnquoteStrings = True
+    AlwaysEnquoteFloats = True
+    Left = 304
+    Top = 176
+  end
+end
